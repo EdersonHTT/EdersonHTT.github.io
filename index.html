@@ -7,21 +7,13 @@
     <title>About</title>
 </head>
 <body>
-    <header>
-        <h1>About</h1>
-        <nav>
-            <ul>
-                
-            </ul>
-        </nav>
-    </header>
-    <aside>
-        <ul>
-        <h2>Procurar</h2>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+    <aside id="aside">
+        <ul id="lista">
+            <li id="l1">Sobre Mim</li>
+            <li id="l2">Objetivos</li>
+            <li id="l3">Formação Academica</li>
+            <li id="l4">Github Projetos</li>
+            <li id="l5">Redes Sociais</li>
         </ul>
     </aside>
     <main>
@@ -32,15 +24,15 @@
                 <p id="desejo">Desenvolvedor Web</p>
             </div>
         </section>
-        <section class="sobreMim">
+        <section class="sobreMim" id="sobreMim">
             <h2>Sobre Mim</h2>
             <p>Olá! Meu nome é Ederson, estou com 16 anos e atualmente moro em São Leopoldo RS, onde estou no primeiro ano do ensino médio. Com um grande interesse na área de programação, estou em busca de oportunidades para adquirir experiência profissional e desenvolver minhas habilidades nesse campo fascinante.</p>
         </section>
-        <section class="sobreMim">
+        <section class="sobreMim" id="objetivos">
             <h2>Objetivo</h2>
             <p>Estou em busca de oportunidades na área de desenvolvimento web para aprimorar minhas habilidades e ganhar experiência prática. Tenho um forte interesse em aplicar meus conhecimentos técnicos no desenvolvimento e implementação de projetos para páginas web, e estou entusiasmado para contribuir em ambientes desafiadores e dinâmicos.</p>
         </section>
-        <section class="sobreMim">
+        <section class="sobreMim" id="formacao">
             <h2>Formação Academica</h2>
             <p>
                 Ensino Médio na escola Caic Madezatti - 2024 - expectativa de conclusão 2026.
@@ -48,8 +40,10 @@
                 <br>Desenvolvimento em front end no instituto Senac- 7/2024 - expectativa de conclusão 8/2024
             </p>
         </section>
-        <section class="despedida">
-            <h1>Obrigado Por ler!!</h1>     
+        <section class="sobreMim" id="githubProjetos">
+            
+        </section> 
+        <section class="sobreMim" id="social">
             <div>
                 <a href="https://www.instagram.com/edersonsilvaschmidt/" target="_blank"><img src="./IMG/Instagram.png" alt="Instagram"></a>
                 <a href="https://github.com/EdersonHTT" target="_blank"><img src="./IMG/GitHub.png" alt="GitHub"></a>
@@ -57,9 +51,10 @@
         </section>
     </main>
     <footer>
-
+        <p>&copy; Ederson da Silva Schmidt</p>
     </footer>
 
-    <script src="./JS/script.js" defer></script>
+    <script src="./JS/aside.js" defer></script>
+    <script src="./JS/main.js" defer></script>
 </body>
 </html>
