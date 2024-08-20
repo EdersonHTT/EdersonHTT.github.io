@@ -52,7 +52,7 @@ b4.addEventListener("click", () =>{
 b5.addEventListener("click", () =>{
     sobreMim.style.display = "none"
     formacao.style.display = "none"
-    social.style.display = "flex"
+    social.style.display = "grid"
     github.style.display = "none"
     objetivo.style.display = "none"
 })

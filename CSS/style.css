@@ -17,9 +17,9 @@ aside{
     border-right: 3px solid rgb(37, 9, 0);
 }
 
-aside ul {
+aside #lista {
     position: fixed;
-    width: 18%;
+    width: auto;
     height: 80vh;
     margin-top: 5px;
     display: flex;
@@ -28,9 +28,10 @@ aside ul {
     padding: 0;
     list-style: none;
     flex-direction: column;
+    margin-top: 50px;
 }
 
-aside ul li {
+aside #lista li {
     border-top: 2px solid rgb(255, 255, 255);
     border-bottom: 2px solid rgb(255, 255, 255);
     width: 100%;
@@ -42,9 +43,10 @@ aside ul li {
     align-items: center;
     justify-content: center;
     color: white;
+    font-size: 15px;
 }
 
-aside ul li:hover{
+aside #lista li:hover{
     border-color: rgb(37, 9, 0);
     color: rgb(37, 9, 0);
 }
@@ -54,38 +56,40 @@ aside ul li:hover{
     height: 40px;
     align-self: flex-start;
     margin: 10px 0;
-    margin-bottom: 35%;
     background-color: rgb(70, 26, 0);
     border: 2px solid rgb(37, 9, 0);
     border-left: none;
     padding-left: 15px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    cursor: pointer;
 }
 
-#menu:hover{
+#menu img:hover{
     background-color: rgb(122, 45, 0);
 }
 
 #menu img{
     width: 40px;
+    cursor: pointer;
     height: 40px;
+    padding-left: 15px;
+    position: relative;
+    right: 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 #tri {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     transform: rotate(45deg);
     background-color: rgb(70, 26, 0);
     border: 2px solid rgb(37, 9, 0);
     border-bottom: none;
     border-right: none;
-    order: -1;
     position: relative;
-    align-self: flex-start;
-    bottom: 23px;
-    left: 7px;
+    bottom: 175px;
+    left: 12px;
 }
 
 #listaMenu{
@@ -95,21 +99,34 @@ aside ul li:hover{
     background-color: rgb(70, 26, 0);
     border: 2px solid rgb(37, 9, 0);
     width: 180px;
-    height: 250px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position:relative;
     align-items: center;
-    justify-content: space-around;
-    padding-bottom: 10px;
-    margin-top: 15px;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 #listaMenu li {
-    border: 1px solid rgb(7, 9, 0);
+    border: 1px solid rgb(37, 9, 0);
     border-left: none; 
     border-right: none; 
     width: 100%;
+    cursor: pointer;
+    font-size: 18.5px;
+    text-align: center;
+    padding: 5px 0;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+
+#listaMenu #l1{
+    border-top: none;
+}
+
+#listaMenu #l5{
+    border-bottom: none;
 }
 
 main{
@@ -118,7 +135,6 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 }
 
 main section{
@@ -254,7 +270,9 @@ main section h2 {
     flex-direction: column;
     display: none;
     order: 2;
-    margin-bottom: 35vh;
+    justify-self: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 #sobreMim{
@@ -274,13 +292,15 @@ main section h2 {
 }
 
 #social{
-    flex-direction: row;
+    height: auto;
+    grid-template-columns: repeat(auto-fit, minmax(120px, auto));
+    grid-template-rows: repeat(auto-fit, auto);
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 #social img{
-    width: 150px;
+    width: 100px;
 }
 
 #formacao {
