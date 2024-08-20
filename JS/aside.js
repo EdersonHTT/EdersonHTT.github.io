@@ -1,27 +1,43 @@
 
 let aside = document.querySelector("aside");
 let ul = document.getElementById("lista");
+let display = window.getComputedStyle(aside);
+let main = document.getElementById("main");
+let img = document.createElement("img");
+let menu = document.createElement("div");
+let triangulo = document.createElement("div")
 
-let display = window.getComputedStyle(aside)
+triangulo.id = "tri"
 
-let main = document.getElementById("main")
+menu.appendChild(img).src = "./IMG/menu.png"
 
-let menu = document.createElement("img");
+menu.id = "menu";
 
-menu.id = "menu"
+let lista = document.querySelector("ul");
 
-setInterval(()=>{
+
+window.addEventListener("resize", ()=>{
     if(display.getPropertyValue("display") === "none"){
-    
-        main.appendChild(menu).src = "./IMG/menu.png"
+
+        main.appendChild(menu)
+
     }else{
+
         main.removeChild(menu).src = "./IMG/menu.png"
+
     }
-    return
-}, 200)
+})
+
+let click = 0
 
 menu.addEventListener("click", ()=>{
-    lista = document.createElement("div")
-    lista.id = "listaMenu"
+    lista.appendChild(triangulo)
     menu.appendChild(lista)
+    lista.id = "listaMenu"
+
+    click++
+    if(click === 2){
+        menu.removeChild(lista)
+        click = 0
+    }
 })
