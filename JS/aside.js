@@ -1,17 +1,27 @@
-let ul = document.getElementById("lista")
 
-let menu = document.createElement("img")
+let aside = document.querySelector("aside");
+let ul = document.getElementById("lista");
 
-document.body.appendChild(menu)
+let display = window.getComputedStyle(aside)
 
-menu.style.backgroundColor = "black"
+let main = document.getElementById("main")
 
-menu.style.gridColumn = "1/2"
-menu.style.gridRow = "1/1"
-menu.style.marginTop = "150px"
-menu.style.marginLeft = "10px"
-menu.style.padding = "5px"
-menu.style.cursor = "pointer"
-menu.style.width = "40px"
-menu.style.height = "40px"
-menu.style.borderRadius = "50%"
+let menu = document.createElement("img");
+
+menu.id = "menu"
+
+setInterval(()=>{
+    if(display.getPropertyValue("display") === "none"){
+    
+        main.appendChild(menu).src = "./IMG/menu.png"
+    }else{
+        main.removeChild(menu).src = "./IMG/menu.png"
+    }
+    return
+}, 200)
+
+menu.addEventListener("click", ()=>{
+    lista = document.createElement("div")
+    lista.id = "listaMenu"
+    menu.appendChild(lista)
+})

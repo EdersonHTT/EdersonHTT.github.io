@@ -30,16 +30,33 @@ aside ul {
 }
 
 aside ul li {
-    border-top: 2px solid rgb(44, 44, 44);
-    border-bottom: 2px solid rgb(44, 44, 44);
+    border-top: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(255, 255, 255);
     width: 100%;
-    height: 10%;
+    height: 5%;
     margin: 0;
     padding: 0;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
+}
+
+aside ul li:hover{
+    border-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+#menu {
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+}
+
+#menu img{
+    width: 40px;
+    height: 40px;
 }
 
 main{
@@ -49,13 +66,11 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 main section{
-    background-color: rgb(255, 255, 255);
     display: flex;
-    padding: 40px 0;
 }
 
 main section p {
@@ -74,6 +89,8 @@ main section h2 {
     background-color: rgb(74, 0, 148);
     width: 100%;
     padding: 10px 0;
+    order: 0;
+    color: white;
 }
 
 #perfil img{
@@ -180,11 +197,12 @@ main section h2 {
 
 .sobreMim{
     width: 100%;
-    height: 100%;
+    height: auto;
     align-items: center;
-    justify-content: space-around;
     flex-direction: column;
     display: none;
+    order: 2;
+    margin-bottom: 35vh;
 }
 
 #sobreMim{
@@ -203,8 +221,14 @@ main section h2 {
     text-align: justify;
 }
 
-#social div img{
+#social{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
 
+#social img{
+    width: 150px;
 }
 
 @media (max-width: 1000px){
@@ -271,6 +295,7 @@ footer p {
     aside{
         display: none;
     }
+    
 }
 
 @media (max-width: 794px){
