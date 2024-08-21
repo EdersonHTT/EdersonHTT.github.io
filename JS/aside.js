@@ -23,18 +23,19 @@ window.addEventListener("resize", ()=>{
         if(document.getElementById("menu")){
             
             main.removeChild(menu).src = "./IMG/menu.png"
-           
 
             if(!document.getElementById("lista")){
                 if(click === 1){
                     menu.removeChild(triangulo)
                     click = 0
+                    
                 }
                 aside.appendChild(lista)
                 lista.id = "lista"
 
             }
             lista.id = "lista"
+            
         }
     }
 })
@@ -48,11 +49,25 @@ img.addEventListener("click", ()=>{
         menu.appendChild(triangulo)
         lista.id = "listaMenu";
     }
+
+    document.querySelector("#l1").addEventListener("mouseenter", ()=>{
+        triangulo.style.backgroundColor = "white"
+        document.querySelector("#l1").style.backgroundColor = "white"
+        document.querySelector("#l1").style.color = "rgb(37, 9, 0)"
+    })
+
+    document.querySelector("#l1").addEventListener("mouseleave", ()=>{
+        triangulo.style.backgroundColor = "rgb(177, 85, 0)"
+        document.querySelector("#l1").style.backgroundColor = "rgb(177, 85, 0)"
+        document.querySelector("#l1").style.color = "white"
+    })
+
     if(click === 2){
 
         menu.removeChild(triangulo)
         menu.removeChild(lista)
         lista.id = "lista"
+
         click = 0
     }
 })

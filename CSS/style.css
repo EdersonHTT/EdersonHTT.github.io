@@ -4,7 +4,7 @@ body{
     display: grid;
     width: 100%;
     height: 100vh;
-    grid-template-columns: minmax(150px, 20%) minmax(300px, 80%);
+    grid-template-columns: minmax(220px, 20%) minmax(300px, 80%);
     grid-template-rows: auto 25px;
 }
 
@@ -32,40 +32,46 @@ aside #lista {
 }
 
 aside #lista li {
-    border-top: 2px solid rgb(255, 255, 255);
-    border-bottom: 2px solid rgb(255, 255, 255);
+    border: 2px solid rgb(32, 8, 0);
+    background-color: rgb(177, 85, 0);
     width: 100%;
     height: 5%;
     margin: 0;
-    padding: 0;
+    padding: 0 5px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 20px;
+    border-color: rgb(37, 9, 0);
     color: white;
-    font-size: 15px;
+    box-shadow: 5px 10px black;
 }
 
 aside #lista li:hover{
-    border-color: rgb(37, 9, 0);
+    border: 2px solid rgb(255, 255, 255);
+    background-color: white;
     color: rgb(37, 9, 0);
 }
+
+
 
 #menu {
     width: 40px;
     height: 40px;
     align-self: flex-start;
     margin: 10px 0;
-    background-color: rgb(70, 26, 0);
+    background-color: rgb(177, 85, 0);
     border: 2px solid rgb(37, 9, 0);
     border-left: none;
     padding-left: 15px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    box-shadow: 2px 5px 0 2px black;
 }
 
 #menu img:hover{
-    background-color: rgb(122, 45, 0);
+    background-color: rgb(255, 255, 255);
 }
 
 #menu img{
@@ -83,12 +89,12 @@ aside #lista li:hover{
     width: 15px;
     height: 15px;
     transform: rotate(45deg);
-    background-color: rgb(70, 26, 0);
+    background-color: rgb(177, 85, 0);
     border: 2px solid rgb(37, 9, 0);
     border-bottom: none;
     border-right: none;
     position: relative;
-    bottom: 175px;
+    bottom: 208px;
     left: 12px;
 }
 
@@ -96,7 +102,7 @@ aside #lista li:hover{
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: rgb(70, 26, 0);
+    background-color: rgb(177, 85, 0);
     border: 2px solid rgb(37, 9, 0);
     width: 180px;
     height: auto;
@@ -106,6 +112,7 @@ aside #lista li:hover{
     align-items: center;
     justify-content: center;
     margin-top: 10px;
+    box-shadow: 10px 10px;
 }
 
 #listaMenu li {
@@ -121,6 +128,11 @@ aside #lista li:hover{
     font-family: sans-serif;
 }
 
+#listaMenu li:hover{
+    background-color: white;
+    color: rgb(37, 9, 0);
+}
+
 #listaMenu #l1{
     border-top: none;
 }
@@ -128,6 +140,8 @@ aside #lista li:hover{
 #listaMenu #l5{
     border-bottom: none;
 }
+
+
 
 main{
     grid-row: 1/2;
@@ -156,7 +170,7 @@ main section h2 {
     align-items: center;
     background-color: rgb(105, 47, 0);
     width: 100%;
-    padding: 10px 0;
+    padding: 20px 0;
     order: 0;
     color: white;
     border-bottom: 4px solid rgb(37, 9, 0);
@@ -264,15 +278,19 @@ main section h2 {
 }
 
 .sobreMim{
-    width: 100%;
+    background-color:  rgb(172, 97, 0);
+    border: 2px solid rgb(37, 9, 0);
+    width: 80%;
     height: auto;
     align-items: center;
     flex-direction: column;
     display: none;
     order: 2;
+    margin-top: 10%;
+    margin-bottom: 30px;
     justify-self: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    padding: 50px 0;
+    box-shadow: 10px 10px black;
 }
 
 #sobreMim{
@@ -281,7 +299,11 @@ main section h2 {
 
 .sobreMim h2{
     font-size: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    background-color: rgb(148, 59, 0);
+    border: 3px solid rgb(255, 255, 255);
+    color: white;
+    padding: 10px;
 }
 
 .sobreMim p {
@@ -296,15 +318,112 @@ main section h2 {
     grid-template-columns: repeat(auto-fit, minmax(120px, auto));
     grid-template-rows: repeat(auto-fit, auto);
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    justify-items: center;
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    background-color:  rgb(172, 97, 0);
+    border: 3px solid rgb(37, 9, 0);
+    box-shadow: 10px 10px black;
+    margin-top: 18%;
+    margin-bottom: 30px;
 }
 
 #social img{
     width: 100px;
+    background-color:  rgb(172, 97, 0);
+    border: 3px solid rgb(37, 9, 0);
+    box-shadow: 10px 10px black;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+#social img:hover{
+    border: 3px solid rgb(37, 9, 0);
+    background-color:  rgb(255, 255, 255);
+}
+
+@media (max-width: 320px){
+    #social{
+        width: 140px;
+    }
 }
 
 #formacao {
     text-align: start;
+}
+
+#githubProjetos {
+    flex-direction: column;
+    margin-bottom: 30px;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    box-shadow: none;
+    margin-top: 0;
+}
+
+#githubProjetos #projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    grid-template-rows: repeat(auto-fit, auto);
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    gap: 15px 0;
+    margin-top: 50px;
+    justify-items: center;
+}
+
+#githubProjetos #projetos div{
+    background-color: rgb(177, 85, 0);
+    width: 320px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid rgb(37, 9, 0);
+    box-shadow: 10px 10px black;
+}
+
+#githubProjetos #projetos div p {
+    font-family: sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+#githubProjetos #projetos div h3 {
+    font-size: 25px;
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+
+#githubProjetos #projetos div a {
+    text-decoration: none;
+    color:  rgb(37, 9, 0);
+    background-color:  rgb(201, 80, 0);
+    border: 1px solid rgb(37, 9, 0);
+    padding: 5px;
+}
+
+#githubProjetos #projetos div a:hover {
+    color: white;
+    border-color: white;
+
+}
+
+@media (max-width: 369px){
+    #githubProjetos #projetos{
+        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    }
+
+    #githubProjetos #projetos div{
+        width: 200px;
+    }
 }
 
 @media (max-width: 1000px){
@@ -373,10 +492,3 @@ footer p {
     }
     
 }
-
-@media (max-width: 794px){
-    aside ul{
-        width: 140px;
-    }
-}
-
