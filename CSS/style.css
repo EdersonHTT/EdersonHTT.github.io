@@ -94,7 +94,7 @@ aside #lista li:hover{
     border-bottom: none;
     border-right: none;
     position: relative;
-    bottom: 208px;
+    bottom: 174px;
     left: 12px;
 }
 
@@ -177,12 +177,14 @@ main section h2 {
 }
 
 #perfil img{
-    width: 10vw;
+    width: 120px;
+    height: 120px;
     min-width: 80px;
     border: 2px solid rgb(37, 9, 0);
     border-radius: 100%;
-    padding: 10px;
     margin-left: 40px;
+    margin-bottom: 10px;
+    box-shadow: 10px 10px black;
 }
 
 #perfil div{
