@@ -4,13 +4,13 @@ body{
     display: grid;
     width: 100%;
     height: 100vh;
-    grid-template-columns: minmax(220px, 20%) minmax(300px, 80%);
-    grid-template-rows: auto 25px;
+    grid-template-columns: minmax(230px, 20%) minmax(300px, 80%);
+    grid-template-rows: 180px auto 25px;
 }
 
 aside{
     background-color: rgb(66, 24, 0);
-    grid-row: 1/2;
+    grid-row: 1/3;
     grid-column: 1/2;
     display: flex;
     justify-content: center;
@@ -28,14 +28,14 @@ aside #lista {
     padding: 0;
     list-style: none;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 5%;
 }
 
 aside #lista li {
     border: 2px solid rgb(32, 8, 0);
     background-color: rgb(177, 85, 0);
     width: 100%;
-    height: 5%;
+    height: 30px;
     margin: 0;
     padding: 0 5px;
     cursor: pointer;
@@ -54,11 +54,11 @@ aside #lista li:hover{
     color: rgb(37, 9, 0);
 }
 
-
-
 #menu {
     width: 40px;
     height: 40px;
+    grid-column: 1/2;
+    grid-row: 2/3;
     align-self: flex-start;
     margin: 10px 0;
     background-color: rgb(177, 85, 0);
@@ -68,10 +68,6 @@ aside #lista li:hover{
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 2px 5px 0 2px black;
-}
-
-#menu img:hover{
-    background-color: rgb(255, 255, 255);
 }
 
 #menu img{
@@ -94,7 +90,7 @@ aside #lista li:hover{
     border-bottom: none;
     border-right: none;
     position: relative;
-    bottom: 174px;
+    bottom: 185px;
     left: 12px;
 }
 
@@ -104,7 +100,7 @@ aside #lista li:hover{
     margin: 0;
     background-color: rgb(177, 85, 0);
     border: 2px solid rgb(37, 9, 0);
-    width: 180px;
+    width: 195px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -141,10 +137,8 @@ aside #lista li:hover{
     border-bottom: none;
 }
 
-
-
 main{
-    grid-row: 1/2;
+    grid-row: 1/3;
     grid-column: 2/3;
     display: flex;
     flex-direction: column;
@@ -288,7 +282,7 @@ main section h2 {
     flex-direction: column;
     display: none;
     order: 2;
-    margin-top: 10%;
+    margin-top: 15%;
     margin-bottom: 30px;
     justify-self: center;
     padding: 50px 0;
@@ -334,7 +328,7 @@ main section h2 {
 
 #social img{
     width: 100px;
-    background-color:  rgb(172, 97, 0);
+    background-color:  rgba(255, 145, 0, 0.616);
     border: 3px solid rgb(37, 9, 0);
     box-shadow: 10px 10px black;
     border-radius: 10px;
@@ -349,6 +343,26 @@ main section h2 {
 @media (max-width: 320px){
     #social{
         width: 140px;
+    }
+}
+
+@media (min-width: 666px){
+    .sobreMim{
+        margin-top: 10%;
+    }
+}
+
+@media (max-width: 520px){
+    body{
+    grid-template-rows: 243px auto 25px;
+    }
+
+    .sobreMim{
+        margin-top: 80px;
+    }
+
+    #social{
+        margin-top: 80px;
     }
 }
 
@@ -426,6 +440,10 @@ main section h2 {
     #githubProjetos #projetos div{
         width: 200px;
     }
+
+    #githubProjetos #projetos div h3{
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 1000px){
@@ -440,7 +458,7 @@ main section h2 {
 
 @media (max-width: 635px){
     .sobreMim h2 {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .sobreMim p {
@@ -448,19 +466,19 @@ main section h2 {
     }
 }
 
-@media (max-width: 360px){
+@media (max-width: 380px){
     .sobreMim h2 {
-        font-size: 8vw;
+        font-size: 20px;
     }
 
     .sobreMim p {
-        font-size: 6vw;
+        font-size: 5vw;
     }
 }
 
 @media (max-width: 250px){
     .sobreMim h2 {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .sobreMim p {
@@ -470,7 +488,7 @@ main section h2 {
 
 footer{
     background-color: rgb(37, 9, 0);
-    grid-row: 2/3;
+    grid-row: 3/4;
     grid-column: 1/3;
     display: flex;
     align-items: center;

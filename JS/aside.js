@@ -1,28 +1,12 @@
-
-let aside = document.querySelector("aside");
-let display = window.getComputedStyle(aside);
-let main = document.getElementById("main");
-let img = document.createElement("img");
-let menu = document.createElement("div");
-let triangulo = document.createElement("div")
-
-triangulo.id = "tri"
-
-menu.appendChild(img).src = "./IMG/menu.png"
-
-menu.id = "menu";
-
-let lista = document.querySelector("ul");
-
-window.addEventListener("resize", ()=>{
+function resize(){
     if(display.getPropertyValue("display") === "none"){
 
-        main.appendChild(menu)
+        body.appendChild(menu)
 
     }else{
         if(document.getElementById("menu")){
             
-            main.removeChild(menu).src = "./IMG/menu.png"
+            body.removeChild(menu).src = "./IMG/menu.png"
 
             if(!document.getElementById("lista")){
                 if(click === 1){
@@ -38,7 +22,24 @@ window.addEventListener("resize", ()=>{
             
         }
     }
-})
+}
+
+let aside = document.querySelector("aside");
+let display = window.getComputedStyle(aside);
+let body = document.querySelector("body");
+let img = document.createElement("img");
+let menu = document.createElement("div");
+let triangulo = document.createElement("div")
+
+triangulo.id = "tri"
+
+menu.appendChild(img).src = "./IMG/menu.png"
+
+menu.id = "menu";
+
+let lista = document.querySelector("ul");
+
+window.addEventListener("resize", resize)
 
 let click = 0
 
@@ -48,6 +49,11 @@ img.addEventListener("click", ()=>{
         menu.appendChild(lista)
         menu.appendChild(triangulo)
         lista.id = "listaMenu";
+        menu.style.backgroundColor = "white"
+        
+        setTimeout(() => {
+            menu.style.backgroundColor = "rgb(177, 85, 0)"
+        }, 100);
     }
 
     document.querySelector("#l1").addEventListener("mouseenter", ()=>{
@@ -63,11 +69,38 @@ img.addEventListener("click", ()=>{
     })
 
     if(click === 2){
+        menu.style.backgroundColor = "white"
+        
+        setTimeout(() => {
+            menu.style.backgroundColor = "rgb(177, 85, 0)"
+        }, 100);
 
         menu.removeChild(triangulo)
         menu.removeChild(lista)
         lista.id = "lista"
 
         click = 0
+    }
+})
+
+document.querySelector("main").addEventListener("click", ()=>{
+    if(document.querySelector("#listaMenu")){
+        menu.style.backgroundColor = "white"
+        
+        setTimeout(() => {
+            menu.style.backgroundColor = "rgb(177, 85, 0)"
+        }, 100);
+
+        menu.removeChild(triangulo)
+        menu.removeChild(lista)
+        lista.id = "lista"
+
+        click = 0
+    }
+})
+
+window.addEventListener("load", ()=>{
+    if(window.screen.width  <= 666){
+    resize()
     }
 })
