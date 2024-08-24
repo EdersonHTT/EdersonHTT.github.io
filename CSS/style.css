@@ -92,7 +92,7 @@ aside #lista li:hover{
     grid-column: 1/2;
     grid-row: 1/2;
     margin-left: 11px;
-    margin-bottom: 38px;
+    margin-bottom: 37px;
 }
 
 #listaMenu{
@@ -102,10 +102,10 @@ aside #lista li:hover{
     background-color: rgb(177, 85, 0);
     border: 2px solid rgb(37, 9, 0);
     width: 195px;
-    height: auto;
+    height: 170px;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 35px repeat(3, auto);
+    grid-template-rows: 33px repeat(3, auto);
     position:relative;
     align-items: center;
     justify-content: flex-start;
