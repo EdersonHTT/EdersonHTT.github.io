@@ -105,9 +105,10 @@ aside #lista li:hover{
     height: auto;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(4, 35px);
+    grid-template-rows: 35px repeat(3, auto);
     position:relative;
     align-items: center;
+    justify-content: flex-start;
     margin-top: 16px;
     box-shadow: 10px 10px;
     grid-template-areas: 
@@ -123,6 +124,7 @@ aside #lista li:hover{
     border-left: none; 
     border-right: none; 
     width: 100%;
+    height:fit-content;
     cursor: pointer;
     font-size: 18.5px;
     text-align: center;
