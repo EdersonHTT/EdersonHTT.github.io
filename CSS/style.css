@@ -4,7 +4,7 @@ body{
     display: grid;
     width: 100%;
     height: 100vh;
-    grid-template-columns: minmax(230px, 20%) minmax(300px, 80%);
+    grid-template-columns: minmax(250px, 20%) minmax(300px, 80%);
     grid-template-rows: 180px auto 25px;
 }
 
@@ -89,9 +89,10 @@ aside #lista li:hover{
     border: 2px solid rgb(37, 9, 0);
     border-bottom: none;
     border-right: none;
-    position: relative;
-    bottom: 185px;
-    left: 12px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-left: 11px;
+    margin-bottom: 38px;
 }
 
 #listaMenu{
@@ -102,13 +103,19 @@ aside #lista li:hover{
     border: 2px solid rgb(37, 9, 0);
     width: 195px;
     height: auto;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 35px);
     position:relative;
     align-items: center;
-    justify-content: center;
-    margin-top: 10px;
+    margin-top: 16px;
     box-shadow: 10px 10px;
+    grid-template-areas: 
+    "l1"
+    "l2" 
+    "l3" 
+    "l4" 
+    "l5";
 }
 
 #listaMenu li {
@@ -131,9 +138,26 @@ aside #lista li:hover{
 
 #listaMenu #l1{
     border-top: none;
+    grid-area: l1;
+}
+
+#listaMenu #l2{
+    grid-area: l2;
+
+}
+
+#listaMenu #l3{
+    grid-area: l3;
+
+}
+
+#listaMenu #l4{
+    grid-area: l4;
+
 }
 
 #listaMenu #l5{
+    grid-area: l5;
     border-bottom: none;
 }
 

@@ -10,7 +10,7 @@ function resize(){
 
             if(!document.getElementById("lista")){
                 if(click === 1){
-                    menu.removeChild(triangulo)
+                    lista.removeChild(triangulo)
                     click = 0
                     
                 }
@@ -47,7 +47,7 @@ img.addEventListener("click", ()=>{
     click++
     if(click === 1){
         menu.appendChild(lista)
-        menu.appendChild(triangulo)
+        lista.appendChild(triangulo)
         lista.id = "listaMenu";
         menu.style.backgroundColor = "white"
         
@@ -75,7 +75,7 @@ img.addEventListener("click", ()=>{
             menu.style.backgroundColor = "rgb(177, 85, 0)"
         }, 100);
 
-        menu.removeChild(triangulo)
+        lista.removeChild(triangulo)
         menu.removeChild(lista)
         lista.id = "lista"
 
@@ -91,7 +91,7 @@ document.querySelector("main").addEventListener("click", ()=>{
             menu.style.backgroundColor = "rgb(177, 85, 0)"
         }, 100);
 
-        menu.removeChild(triangulo)
+        lista.removeChild(triangulo)
         menu.removeChild(lista)
         lista.id = "lista"
 
