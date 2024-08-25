@@ -92,17 +92,17 @@ aside #lista li:hover{
     grid-column: 1/2;
     grid-row: 1/2;
     margin-left: 11px;
-    margin-bottom: 35.9px;
+    margin-bottom: 35px;
 }
 
 #listaMenu{
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: rgb(177, 85, 0);
+    background-color: rgb(37, 9, 0);
     border: 2px solid rgb(37, 9, 0);
     width: 195px;
-    height: 165.5px;
+    height: auto;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 33px repeat(3, auto);
@@ -117,12 +117,10 @@ aside #lista li:hover{
     "l3" 
     "l4" 
     "l5";
+    gap: 2px 0;
 }
 
 #listaMenu li {
-    border: 1px solid rgb(37, 9, 0);
-    border-left: none; 
-    border-right: none; 
     width: 100%;
     height:fit-content;
     cursor: pointer;
@@ -131,6 +129,7 @@ aside #lista li:hover{
     padding: 5px 0;
     color: rgb(255, 255, 255);
     font-family: sans-serif;
+    background-color: rgb(177, 85, 0);
 }
 
 #listaMenu li:hover{
@@ -139,7 +138,6 @@ aside #lista li:hover{
 }
 
 #listaMenu #l1{
-    border-top: none;
     grid-area: l1;
     height: 22px;
 }
@@ -161,7 +159,6 @@ aside #lista li:hover{
 
 #listaMenu #l5{
     grid-area: l5;
-    border-bottom: none;
 }
 
 main{
