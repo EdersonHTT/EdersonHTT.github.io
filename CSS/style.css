@@ -462,11 +462,33 @@ main section h2 {
     }
 
     #githubProjetos #projetos div{
+        width: 230px;
+    }
+
+    #githubProjetos #projetos div h3{
+        font-size: 18px;
+    }
+
+    #githubProjetos p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 369px){
+    #githubProjetos #projetos{
+        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    }
+
+    #githubProjetos #projetos div{
         width: 200px;
     }
 
     #githubProjetos #projetos div h3{
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    #githubProjetos p {
+        font-size: 10px;
     }
 }
 
@@ -498,6 +520,10 @@ main section h2 {
     .sobreMim p {
         font-size: 5vw;
     }
+
+    #githubProjetos div p {
+        font-size: 10px;
+    }
 }
 
 @media (max-width: 250px){
@@ -507,6 +533,10 @@ main section h2 {
 
     .sobreMim p {
         font-size: 15px;
+    }
+
+    #githubProjetos div p {
+        font-size: 10px;
     }
 }
 
